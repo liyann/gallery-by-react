@@ -20,10 +20,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /README.md
-.idea/gallery-by-react.iml
-.idea/inspectionProfiles/
-.idea/jsLibraryMappings.xml
-.idea/jsLinters/jshint.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
+/.idea
+
+/src/styles/App.css

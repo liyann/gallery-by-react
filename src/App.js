@@ -125,7 +125,7 @@ class App extends Component {
     constructor(props) {
         super(props)
 
-        console.log("imageDatas:",imageDatas);
+        // console.log("imageDatas:",imageDatas);
         let imgsArrangeArr = imageDatas.map((value,index) => {
             return {
             pos: {
@@ -141,7 +141,7 @@ class App extends Component {
             imgsArrangeArr:imgsArrangeArr
         }
 
-        console.log("this.state.imgsArrangeArr:",this.state.imgsArrangeArr.length,this.state.imgsArrangeArr)
+        // console.log("this.state.imgsArrangeArr:",this.state.imgsArrangeArr.length,this.state.imgsArrangeArr)
     }
 
     Constant = {
@@ -180,7 +180,7 @@ class App extends Component {
             topImgSpliceIndex = 0,
 
             imgsArrangeCenterArr = imgsArrangeArr.splice(centerIndex, 1);
-        console.log("imgsArrangeCenterArr:", imgsArrangeCenterArr);
+        // console.log("imgsArrangeCenterArr:", imgsArrangeCenterArr);
 
         //居中 centerIndex 的图片,居中的不旋转
         imgsArrangeCenterArr[0] = {
@@ -224,7 +224,7 @@ class App extends Component {
                 rotate: get30DegRandom(),
                 isCenter: false
             };
-            console.log("imgsArrangeArr[i]:", imgsArrangeArr[i]);
+            // console.log("imgsArrangeArr[i]:", imgsArrangeArr[i]);
 
         }
 
@@ -243,12 +243,12 @@ class App extends Component {
 
 
     center = (index) => () => {
-        console.log("center-index:",index)
+        // console.log("center-index:",index)
         this.rearrange(index)
     }
 
     inverse = (index) => () => {
-        console.log("inverse-index:",index)
+        // console.log("inverse-index:",index)
         let imgsArrangeArr = this.state.imgsArrangeArr;
 
         imgsArrangeArr[index].isInverse = !imgsArrangeArr[index].isInverse
@@ -301,7 +301,7 @@ class App extends Component {
 
     render() {
         let controllerUnits = [], imgFigures = [];
-        console.log("after render:this.state.imgsArrangeArr ",this.state.imgsArrangeArr);
+        // console.log("after render:this.state.imgsArrangeArr ",this.state.imgsArrangeArr);
         imageDatas.forEach((value, index) => {
             imgFigures.push(
                 <ImgFigure
@@ -322,7 +322,7 @@ class App extends Component {
                     center={this.center(index)}
                 />
             );
-            console.log(this.state.imgsArrangeArr[index]);
+            // console.log(this.state.imgsArrangeArr[index]);
         })
 
 
